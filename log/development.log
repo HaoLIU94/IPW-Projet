@@ -1,0 +1,3242 @@
+  [1m[35m (74.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (106.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNotes (20170430191711)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titre" varchar, "date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170430191711"]]
+  [1m[35m (107.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-30 19:18:29 UTC], ["updated_at", 2017-04-30 19:18:29 UTC]]
+  [1m[35m (53.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-04-30 21:20:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 18ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:20:06 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 1441ms (Views: 1426.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-04-30 21:20:16 +0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (9.2ms)
+  Rendered notes/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 64ms (Views: 53.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-04-30 21:20:41 +0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F9ekWEcQIBzJxSrholG1arfGmFDuPhyg5CzAmUDog1qajWWjKFEK7W2ehfLjmqLBKI0tdcaGBDFgRf+7LRvefQ==", "note"=>{"titre"=>"Programmation Web", "date"=>"20/05"}, "commit"=>"Create Note"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "notes" ("titre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["titre", "Programmation Web"], ["created_at", 2017-04-30 19:20:41 UTC], ["updated_at", 2017-04-30 19:20:41 UTC]]
+  [1m[35m (196.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/notes/1
+Completed 302 Found in 206ms (ActiveRecord: 196.6ms)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2017-04-30 21:20:41 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (1.6ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 117ms (Views: 99.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:20:44 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-04-30 21:20:48 +0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (3.7ms)
+  Rendered notes/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:20:50 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/1/edit" for 127.0.0.1 at 2017-04-30 21:20:51 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/_form.html.erb (4.0ms)
+  Rendered notes/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/notes/1" for 127.0.0.1 at 2017-04-30 21:21:03 +0200
+Processing by NotesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6K2U3E8mNlfscd9K2/cRZgUuiNwsvtPEXBA6HYyIOWmuyj/ghgEZSoyUcGH4Ty+LbxhYEnAG3OOyl0QduPplIg==", "note"=>{"titre"=>"Programmation Web", "date"=>"15,5"}, "commit"=>"Update Note", "id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/notes/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2017-04-30 21:21:03 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:21:04 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-04-30 21:21:12 +0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (4.8ms)
+  Rendered notes/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 63ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-04-30 21:21:31 +0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"50sdz4p9pmA0M3INgsa0UezsZH+329EaKZugaSP+ek1qEdw05TyMkZBo3R7DDaP6c6fRWp9jyYut8p9LTg0nag==", "note"=>{"titre"=>"Statistics", "date"=>"56"}, "commit"=>"Create Note"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "notes" ("titre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["titre", "Statistics"], ["created_at", 2017-04-30 19:21:31 UTC], ["updated_at", 2017-04-30 19:21:31 UTC]]
+  [1m[35m (194.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/notes/2
+Completed 302 Found in 200ms (ActiveRecord: 195.2ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-04-30 21:21:31 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 80ms (Views: 74.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:21:32 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2017-04-30 21:23:19 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes/1/edit" for 127.0.0.1 at 2017-04-30 21:23:22 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/_form.html.erb (4.7ms)
+  Rendered notes/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-04-30 21:23:49 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 117ms (Views: 109.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-04-30 21:23:52 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-04-30 21:23:53 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:23:57 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:26:51 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/path1" for 127.0.0.1 at 2017-04-30 21:26:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (2.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.5ms)
+Started GET "/products" for 127.0.0.1 at 2017-04-30 21:26:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (3.2ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.6ms)
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:27:04 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 80ms (Views: 74.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSubjets (20170430192829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "subjets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titre" varchar, "periode" time, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170430192829"]]
+  [1m[35m (152.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:29:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 601ms (Views: 587.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:29:40 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:29:41 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:29:42 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 96ms (Views: 91.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/path1" for 127.0.0.1 at 2017-04-30 21:29:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (4.4ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.1ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.5ms)
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:29:51 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/path1" for 127.0.0.1 at 2017-04-30 21:30:44 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (4.3ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.5ms)
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:37:54 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:37:56 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_subjets_index_html_erb__2430472262251923024_69880586807520 at /home/hao/Web/lesnotes/app/views/subjets/index.html.erb:15)
+  Rendered subjets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:37:58 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (23.0ms)
+  Rendered subjets/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 93ms (Views: 76.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:03 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:05 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (1.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:06 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (1.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 112ms (Views: 105.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:38:08 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (24.4ms)
+  Rendered subjets/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 110ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:38:10 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (6.1ms)
+  Rendered subjets/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:11 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 76ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:52 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:52 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 94ms (Views: 88.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:54 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (1.1ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 94ms (Views: 88.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:38:56 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (18.2ms)
+  Rendered subjets/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 109ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:38:58 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/path2" for 127.0.0.1 at 2017-04-30 21:39:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path2"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (3.8ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.4ms)
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:39:56 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 67ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:25 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 73ms (Views: 69.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:27 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:27 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 91ms (Views: 86.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:29 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 125ms (Views: 118.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:30 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 115ms (Views: 109.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:30 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 147ms (Views: 138.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:31 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 121ms (Views: 114.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:32 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 114ms (Views: 108.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:33 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 115ms (Views: 110.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:34 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:35 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.4ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 79ms (Views: 70.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:36 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 128ms (Views: 120.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:37 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 100ms (Views: 94.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:40:39 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (8.6ms)
+  Rendered subjets/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 85ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:40 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:42 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 115ms (Views: 109.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:43 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 117ms (Views: 108.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:44 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 92ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:44 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 124ms (Views: 118.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/path3" for 127.0.0.1 at 2017-04-30 21:40:45 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path3"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (4.6ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.4ms)
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:48 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:48 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:51 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:40:53 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:40:54 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:43:37 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateExams (20170430194303)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "exams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titre" varchar, "prof" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170430194303"]]
+  [1m[35m (109.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 163ms (Views: 159.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:44:17 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:19 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:44:20 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.4ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_subjets_index_html_erb__2430472262251923024_69880587877900 at /home/hao/Web/lesnotes/app/views/subjets/index.html.erb:15)
+  Rendered subjets/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 119ms (Views: 107.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:21 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:44:21 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 112ms (Views: 104.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:22 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 122ms (Views: 115.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:44:23 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 140ms (Views: 134.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:23 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:44:24 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 112ms (Views: 107.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:24 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 142ms (Views: 137.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:44:25 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 131ms (Views: 127.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:26 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 116ms (Views: 106.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:44:27 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 124ms (Views: 119.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:28 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 130ms (Views: 125.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:44:29 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 127ms (Views: 121.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:29 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 131ms (Views: 119.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:44:31 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 104ms (Views: 98.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:31 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 125ms (Views: 118.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:44:32 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.8ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 125ms (Views: 118.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:44:33 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 110ms (Views: 101.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:44:33 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 119ms (Views: 113.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:05 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/path" for 127.0.0.1 at 2017-04-30 21:45:07 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (6.5ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.4ms)
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:09 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.1ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:10 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:11 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 116ms (Views: 110.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:11 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 118ms (Views: 112.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:12 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 110ms (Views: 104.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:13 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 128ms (Views: 121.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:13 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 124ms (Views: 119.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:14 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 126ms (Views: 121.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:15 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (3.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 72ms (Views: 65.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:16 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 131ms (Views: 122.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:17 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 119ms (Views: 114.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:18 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:18 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 72ms (Views: 65.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:20 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 90ms (Views: 86.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/path" for 127.0.0.1 at 2017-04-30 21:45:20 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (10.3ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.7ms)
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:23 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:24 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:24 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:25 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 94ms (Views: 89.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-04-30 21:45:27 +0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (12.1ms)
+  Rendered notes/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 123ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:29 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:29 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 99ms (Views: 93.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:30 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:45:31 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 119ms (Views: 111.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/path" for 127.0.0.1 at 2017-04-30 21:45:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (7.6ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.6ms)
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:34 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:45:36 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (5.1ms)
+  Rendered subjets/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 69ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:45:38 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:40 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:45:42 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (6.9ms)
+  Rendered subjets/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subjets" for 127.0.0.1 at 2017-04-30 21:45:54 +0200
+Processing by SubjetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXN/hqBeEsgKe2qSgpom2TH7UTfQWY1Yarp830IqGJOQHCnCUeMBd92zFJ7ItGW7+ModDzdE9abLSjBdCOQ/ww==", "subjet"=>{"titre"=>"IPQ", "periode(1i)"=>"2017", "periode(2i)"=>"4", "periode(3i)"=>"30", "periode(4i)"=>"19", "periode(5i)"=>"45"}, "commit"=>"Create Subjet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "subjets" ("titre", "periode", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["titre", "IPQ"], ["periode", 2017-04-30 19:45:00 UTC], ["created_at", 2017-04-30 19:45:54 UTC], ["updated_at", 2017-04-30 19:45:54 UTC]]
+  [1m[35m (161.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/subjets/1
+Completed 302 Found in 172ms (ActiveRecord: 163.4ms)
+
+
+Started GET "/subjets/1" for 127.0.0.1 at 2017-04-30 21:45:55 +0200
+Processing by SubjetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubjet Load (1.2ms)[0m  [1m[34mSELECT  "subjets".* FROM "subjets" WHERE "subjets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering subjets/show.html.erb within layouts/application
+  Rendered subjets/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 85ms (Views: 68.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:45:59 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:46:01 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (8.1ms)
+  Rendered subjets/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:46:06 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:46:08 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 107ms (Views: 102.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:46:09 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 108ms (Views: 100.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:46:10 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 122ms (Views: 116.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 21:46:13 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (11.8ms)
+  Rendered subjets/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 83ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subjets" for 127.0.0.1 at 2017-04-30 21:46:18 +0200
+Processing by SubjetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bvdqo5IMkrhtYIQamAv3CqMkfwrGveytaNMdItg0QkIPmDznY7GBB7qo+hbSJbRoahUzMiGglFPJI1GgkvplEg==", "subjet"=>{"titre"=>"MST", "periode(1i)"=>"2017", "periode(2i)"=>"4", "periode(3i)"=>"30", "periode(4i)"=>"19", "periode(5i)"=>"46"}, "commit"=>"Create Subjet"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "subjets" ("titre", "periode", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["titre", "MST"], ["periode", 2017-04-30 19:46:00 UTC], ["created_at", 2017-04-30 19:46:18 UTC], ["updated_at", 2017-04-30 19:46:18 UTC]]
+  [1m[35m (109.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/subjets/2
+Completed 302 Found in 127ms (ActiveRecord: 110.6ms)
+
+
+Started GET "/subjets/2" for 127.0.0.1 at 2017-04-30 21:46:18 +0200
+Processing by SubjetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubjet Load (0.4ms)[0m  [1m[34mSELECT  "subjets".* FROM "subjets" WHERE "subjets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering subjets/show.html.erb within layouts/application
+  Rendered subjets/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 96ms (Views: 88.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:46:20 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.1ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:46:22 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:46:23 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 109ms (Views: 105.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exams/new" for 127.0.0.1 at 2017-04-30 21:46:24 +0200
+Processing by ExamsController#new as HTML
+  Rendering exams/new.html.erb within layouts/application
+  Rendered exams/_form.html.erb (9.3ms)
+  Rendered exams/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 107ms (Views: 87.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/exams" for 127.0.0.1 at 2017-04-30 21:46:35 +0200
+Processing by ExamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lv8+JyYMu5UToQZMxIecd4F5xLpBUhruHSuxXmH0f++V0hJG3xJRdIQhxMmWgyAichj0kmPFiv0gcazOhEoIPA==", "exam"=>{"titre"=>"IPI", "prof"=>"Pierre"}, "commit"=>"Create Exam"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "exams" ("titre", "prof", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["titre", "IPI"], ["prof", "Pierre"], ["created_at", 2017-04-30 19:46:35 UTC], ["updated_at", 2017-04-30 19:46:35 UTC]]
+  [1m[35m (461.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/exams/1
+Completed 302 Found in 470ms (ActiveRecord: 462.9ms)
+
+
+Started GET "/exams/1" for 127.0.0.1 at 2017-04-30 21:46:36 +0200
+Processing by ExamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering exams/show.html.erb within layouts/application
+  Rendered exams/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 55.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:46:37 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.1ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/exams/new" for 127.0.0.1 at 2017-04-30 21:46:40 +0200
+Processing by ExamsController#new as HTML
+  Rendering exams/new.html.erb within layouts/application
+  Rendered exams/_form.html.erb (4.6ms)
+  Rendered exams/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exams" for 127.0.0.1 at 2017-04-30 21:46:49 +0200
+Processing by ExamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JmSfZoNVnoInZxy09fTEl3OYprNpDiB5UPQHjOhzgJMlSbMHekt0Y7Dn3jGn8HjCgPmWm0uZsGptrhocDc33QA==", "exam"=>{"titre"=>"MON", "prof"=>"Loubna"}, "commit"=>"Create Exam"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "exams" ("titre", "prof", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["titre", "MON"], ["prof", "Loubna"], ["created_at", 2017-04-30 19:46:49 UTC], ["updated_at", 2017-04-30 19:46:49 UTC]]
+  [1m[35m (153.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/exams/2
+Completed 302 Found in 169ms (ActiveRecord: 154.7ms)
+
+
+Started GET "/exams/2" for 127.0.0.1 at 2017-04-30 21:46:49 +0200
+Processing by ExamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mExam Load (0.3ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering exams/show.html.erb within layouts/application
+  Rendered exams/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 113ms (Views: 107.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:46:51 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:46:52 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.8ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 82ms (Views: 75.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:46:53 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:46:54 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 96ms (Views: 90.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/path" for 127.0.0.1 at 2017-04-30 21:46:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (6.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-30 21:47:06 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:47:21 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 111ms (Views: 106.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 21:47:25 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 21:47:27 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 21:47:30 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:36:57 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 132ms (Views: 126.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:36:58 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 130ms (Views: 123.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:36:59 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 139ms (Views: 132.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/path" for 127.0.0.1 at 2017-04-30 22:36:59 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (5.5ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.7ms)
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:45:49 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 101ms (Views: 98.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:45:51 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 88ms (Views: 85.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:45:52 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 91ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:45:53 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:45:54 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:45:54 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 143ms (Views: 132.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:45:55 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:45:55 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 132ms (Views: 127.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:46:07 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:48:24 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:48:27 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 83ms (Views: 75.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:48:27 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.9ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 140ms (Views: 134.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:48:28 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 164ms (Views: 158.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:48:28 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.6ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 139ms (Views: 133.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:48:28 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.9ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 159ms (Views: 153.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:49:32 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 92ms (Views: 87.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:49:58 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.4ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:53:03 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_subjets_index_html_erb__1121863200071923861_47193440149040 at /home/hao/Web/lesnotes/app/views/subjets/index.html.erb:15)
+  Rendered subjets/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 655ms (Views: 638.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:53:04 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.9ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 104ms (Views: 101.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/path1" for 127.0.0.1 at 2017-04-30 22:53:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (8.1ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.3ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.0ms)
+Started GET "/path1" for 127.0.0.1 at 2017-04-30 22:53:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (15.0ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.7ms)
+Started GET "/path2" for 127.0.0.1 at 2017-04-30 22:53:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path2"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (5.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.6ms)
+Started GET "/path1" for 127.0.0.1 at 2017-04-30 22:53:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (19.3ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.1ms)
+Started GET "/path2" for 127.0.0.1 at 2017-04-30 22:53:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/path2"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (14.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.1ms)
+Started GET "/subjets/new" for 127.0.0.1 at 2017-04-30 22:53:52 +0200
+Processing by SubjetsController#new as HTML
+  Rendering subjets/new.html.erb within layouts/application
+  Rendered subjets/_form.html.erb (13.8ms)
+  Rendered subjets/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:54:37 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.4ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 75ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:54:38 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:55:04 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 92ms (Views: 88.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:55:05 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:55:06 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:55:07 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (2.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 129ms (Views: 120.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:55:08 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 138ms (Views: 127.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:55:09 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:55:35 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `subjects_path' for #<#<Class:0x007f16b834e858>:0x007f16b855b4e8>
+Did you mean?  subjets_path
+               subjet_path):
+    50:           <ul class="nav navbar-nav">
+    51:             <li><%= link_to "Exams", exams_path  %></li>
+    52:             <li><%= link_to "Notes", notes_path  %></li>
+    53:             <li><%= link_to "Subjects", subjects_path  %></li>
+    54:           </ul>
+    55:         </div>
+    56:       </div>
+  
+app/views/layouts/application.html.erb:53:in `_app_views_layouts_application_html_erb__3276766116827746749_69867779340280'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:55:55 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 103ms (Views: 98.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:55:58 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:55:59 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 92ms (Views: 88.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:00 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 84ms (Views: 80.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:00 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:01 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 131ms (Views: 123.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:02 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 136ms (Views: 130.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:03 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 155ms (Views: 148.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:03 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 138ms (Views: 130.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:56:04 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 149ms (Views: 143.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:05 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 132ms (Views: 124.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:06 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 143ms (Views: 136.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:07 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 115ms (Views: 108.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:07 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (2.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 140ms (Views: 129.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:08 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 133ms (Views: 126.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:56:09 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 136ms (Views: 130.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:09 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 155ms (Views: 145.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:10 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 155ms (Views: 146.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:25 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 112ms (Views: 104.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:26 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 132ms (Views: 126.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:56:26 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (1.9ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 131ms (Views: 117.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:27 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 114ms (Views: 108.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:56:29 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:31 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 82ms (Views: 78.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:56:32 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:56:33 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 124ms (Views: 117.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams/new" for 127.0.0.1 at 2017-04-30 22:56:34 +0200
+Processing by ExamsController#new as HTML
+  Rendering exams/new.html.erb within layouts/application
+  Rendered exams/_form.html.erb (12.8ms)
+  Rendered exams/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 133ms (Views: 127.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exams" for 127.0.0.1 at 2017-04-30 22:57:10 +0200
+Processing by ExamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j7rZ9DgUAUUY5FLnQBW2DGjqjXxbJSCcUSIJuxJ6uVOMl/WVwQrrpI9kkGISEQpZm4u9VHmysI9seBQr98TOgA==", "exam"=>{"titre"=>"Droit des obligations", "prof"=>"Huyen"}, "commit"=>"Create Exam"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "exams" ("titre", "prof", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["titre", "Droit des obligations"], ["prof", "Huyen"], ["created_at", 2017-04-30 20:57:10 UTC], ["updated_at", 2017-04-30 20:57:10 UTC]]
+  [1m[35m (201.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/exams/3
+Completed 302 Found in 213ms (ActiveRecord: 201.6ms)
+
+
+Started GET "/exams/3" for 127.0.0.1 at 2017-04-30 22:57:10 +0200
+Processing by ExamsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering exams/show.html.erb within layouts/application
+  Rendered exams/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 129ms (Views: 115.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:57:13 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:57:18 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-04-30 22:57:19 +0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (12.5ms)
+  Rendered notes/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-04-30 22:57:33 +0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"InAbsQD3rucZPW9ENOPJov6rNilU/thzCYkWvBXs1+CvKtpKb7aEFr1mwFd1KN4JYeCDDHxGwOKN4CmeeB+Kxw==", "note"=>{"titre"=>"Droit des obilgations", "date"=>""}, "commit"=>"Create Note"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "notes" ("titre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["titre", "Droit des obilgations"], ["created_at", 2017-04-30 20:57:33 UTC], ["updated_at", 2017-04-30 20:57:33 UTC]]
+  [1m[35m (181.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/notes/3
+Completed 302 Found in 202ms (ActiveRecord: 182.3ms)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2017-04-30 22:57:33 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 143ms (Views: 133.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:57:35 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from template at (erb):9)
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:59:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 556ms (Views: 538.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:59:54 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 170ms (Views: 166.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:59:55 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.1ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_subjets_index_html_erb___2113371688759328945_70324016241460 at /home/hao/Web/lesnotes/app/views/subjets/index.html.erb:16)
+  Rendered subjets/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:59:56 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 114ms (Views: 108.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:59:56 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 135ms (Views: 127.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:59:57 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 131ms (Views: 124.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 22:59:58 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.9ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 128ms (Views: 113.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 22:59:59 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 132ms (Views: 126.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 22:59:59 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 139ms (Views: 133.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:00 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 138ms (Views: 132.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:01 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 142ms (Views: 136.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:02 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 130ms (Views: 124.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:03 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 134ms (Views: 128.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:00:04 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.5ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 121ms (Views: 115.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:05 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 142ms (Views: 136.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:05 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 136ms (Views: 128.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:06 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 131ms (Views: 117.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:00:07 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 137ms (Views: 131.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:00:10 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 87ms (Views: 84.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:11 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 120ms (Views: 115.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:11 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 136ms (Views: 130.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:12 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 114ms (Views: 102.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:00:13 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.8ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 146ms (Views: 139.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:14 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 145ms (Views: 138.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:15 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (2.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 139ms (Views: 130.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:15 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 135ms (Views: 130.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:00:16 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 134ms (Views: 128.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:17 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 99ms (Views: 93.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:18 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.9ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 134ms (Views: 128.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:19 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 140ms (Views: 135.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:00:20 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 144ms (Views: 139.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:00:22 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 95ms (Views: 92.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:00:23 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 132ms (Views: 124.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:48:32 +0200
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:48:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (25.4ms)
+  Rendered notes/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 967ms (Views: 949.4ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 991ms (Views: 972.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:54:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 1601ms (Views: 1584.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:56:38 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 176ms (Views: 168.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:56:42 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:56:43 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:56:43 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_subjets_index_html_erb___3732286660786657214_70271805568140 at /home/hao/Web/lesnotes/app/views/subjets/index.html.erb:16)
+  Rendered subjets/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 77ms (Views: 68.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:23 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.3ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 84ms (Views: 77.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:23 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 129ms (Views: 123.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:24 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 103ms (Views: 98.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:25 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 126ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:25 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 126ms (Views: 118.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:26 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 127ms (Views: 120.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:26 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 133ms (Views: 126.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:27 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 160ms (Views: 154.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:27 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 140ms (Views: 134.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:27 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 135ms (Views: 129.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:28 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 150ms (Views: 143.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:28 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 149ms (Views: 142.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:29 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 125ms (Views: 120.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:29 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 115ms (Views: 111.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:30 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 122ms (Views: 114.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:30 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 115ms (Views: 109.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:31 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.8ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 114ms (Views: 108.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:31 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 122ms (Views: 110.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:31 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 155ms (Views: 150.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:32 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 141ms (Views: 136.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:32 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 154ms (Views: 143.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:33 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 142ms (Views: 137.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:33 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 123ms (Views: 117.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:34 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 120ms (Views: 114.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:34 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.8ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 125ms (Views: 119.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:34 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 110ms (Views: 103.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:35 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.9ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 145ms (Views: 131.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:35 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 119ms (Views: 115.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:36 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.7ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 137ms (Views: 131.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:37 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 116ms (Views: 110.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-04-30 23:57:37 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 132ms (Views: 125.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-04-30 23:57:37 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 141ms (Views: 135.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-04-30 23:57:38 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.9ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+  Rendered subjets/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 117ms (Views: 111.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-05-01 00:19:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (100.2ms)
+Completed 200 OK in 690ms (Views: 670.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2017-05-01 00:19:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (30.8ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.9ms)
+Started GET "/exams" for 127.0.0.1 at 2017-05-01 00:19:32 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 72ms (Views: 62.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-05-01 00:19:33 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 89ms (Views: 85.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjets" for 127.0.0.1 at 2017-05-01 00:19:34 +0200
+Processing by SubjetsController#index as HTML
+  Rendering subjets/index.html.erb within layouts/application
+  [1m[36mSubjet Load (0.2ms)[0m  [1m[34mSELECT "subjets".* FROM "subjets"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_subjets_index_html_erb___1020304905337938395_70299018170720 at /home/hao/Web_Project/app/views/subjets/index.html.erb:16)
+  Rendered subjets/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 58ms (Views: 54.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2017-05-01 00:19:34 +0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-01 00:19:35 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 1.4ms)
+
+
