@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  titre: MyString
+  name: MyString
+  date: MyString
   prof: MyString
 
 two:
-  titre: MyString
+  name: MyString
+  date: MyString
   prof: MyString

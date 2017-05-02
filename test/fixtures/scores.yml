@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: MyString
+  exam: MyString
+  result: 1
+  prof: MyString
+  date: MyText
+
+two:
+  student: MyString
+  exam: MyString
+  result: 1
+  prof: MyString
+  date: MyText

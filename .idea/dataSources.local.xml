@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails Web_Project: development" uuid="e4a4b791-9555-4db4-ad4e-5c219c71a820">
+    <data-source name="identifier.sqlite" uuid="4be6179e-5671-4a77-802f-32a56bceac58">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
       <first-sync>true</first-sync>
-      <user-name>ruby</user-name>
-      <user-password>dfc6dfcbdfdfdfd8dfcfdfc4dfdedf8cdf4adf43df8c</user-password>
-    </data-source>
-    <data-source name="Rails Web_Project: test" uuid="54bc4ae4-0943-48d4-976f-0976280a5834">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <user-name>ruby</user-name>
-      <user-password>dfc6dfcbdfdfdfd8dfcfdfc4dfdedf8cdf4adf43df8c</user-password>
-    </data-source>
-    <data-source name="Rails Web_Project: production" uuid="d5d1b3e2-05f7-4c35-a137-66334126f41a">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <user-name>my_blog</user-name>
-      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe7dff3dff5dfe8dfe6dfe5dfeddff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
     </data-source>
   </component>
 </project>

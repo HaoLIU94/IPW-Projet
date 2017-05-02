@@ -1,2 +1,0 @@
-class Subjet < ApplicationRecord
-end
