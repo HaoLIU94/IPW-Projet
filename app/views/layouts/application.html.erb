@@ -51,6 +51,7 @@
             <li><%= link_to "Scores", scores_path  %></li>
             <li><%= link_to "Exams",  exams_path %></li>
             <li><%= link_to "Subjects", subjects_path  %></li>
+            <li><%= link_to "Students", students_path  %></li>
           </ul>
         </div>
       </div>
@@ -67,7 +68,7 @@
             <h3>Menu</h3>
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Sign in", "/path1"  %></li>
+              <li><%= link_to "Sign in", new_student_path  %></li>
               <li><%= link_to "Log in", "/path2"  %></li>
               <li><%= link_to "Log out", "/path3"  %></li>
             </ul>
