@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Datatable
-  resources :prof, :exams, :subjects, :scores, :students
+  resources :profs, :exams, :subjects, :scores, :students
 
   # Students
   resources :students do
