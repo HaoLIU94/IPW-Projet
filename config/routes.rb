@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'home/index'
+
+  get 'home/welcome'
+
+  get 'home/about'
+
+  get 'home/contact'
+
   # Datatable
   resources :profs, :exams, :subjects, :scores, :students
 
@@ -18,4 +27,5 @@ Rails.application.routes.draw do
       resources :profs
   end
   #root
+  root 'scores#index'
 end

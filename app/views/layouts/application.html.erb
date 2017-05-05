@@ -77,10 +77,14 @@
           <div class="well sidebar-nav">
             <h3>Menu</h3>
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Sign in", new_student_path  %></li>
-              <li><%= link_to "Log in", "/path2"  %></li>
-              <li><%= link_to "Log out", "/path3"  %></li>
+              <li class="nav-header"> </li>
+              <% if user_signed_in? %>
+                  <li><%= link_to current_user.email, profile_path %></li>
+                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                  <li><%= link_to "Sign up", new_user_registration_path  %></li>
+                  <li><%= link_to "Log in", new_user_session_path  %></li>
+              <% end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
