@@ -50,50 +50,43 @@
         <a class="navbar-brand" href="#">My transcript</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <%= form_tag(exams_path, method: "get") do %>
-                <%= label_tag(:q) %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Search") %>
-            <% end %>
             <li><%= link_to "Scores", scores_path  %></li>
             <li><%= link_to "Exams",  exams_path %></li>
             <li><%= link_to "Subjects", subjects_path  %></li>
             <li><%= link_to "Students", students_path  %></li>
             <li><%= link_to "Profs", profs_path  %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">all files <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "file1", root_path %></li>
+                <li><%= link_to "file2", root_path %></li>
+                <li><%= link_to "file3", root_path %></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+                <li><%= link_to current_user.email, profile_path %></li>
+                <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path  %></li>
+                <li><%= link_to "Log in", new_user_session_path  %></li>
+            <% end %>
           </ul>
         </div>
       </div>
     </div>
 
-
+    <%= form_tag(scores_path, method: "get", class: "navbar-form navbar-right", role: "search") do %>
+      <%= text_field_tag(:q, params[:q], placeholder: "Student name", class: "form-control input-sm") %>
+      <%= submit_tag("Search", class: "btn btn-info btn-sm") %>
+    <% end %>
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
           <%= bootstrap_flash %>
           <%= yield %>
-        </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Menu</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header"> </li>
-              <% if user_signed_in? %>
-                  <li><%= link_to current_user.email, profile_path %></li>
-                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-              <% else %>
-                  <li><%= link_to "Sign up", new_user_registration_path  %></li>
-                  <li><%= link_to "Log in", new_user_session_path  %></li>
-              <% end %>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
       </div><!--/row-->
-
-      <footer>
-        <p>&copy;Hao LIU, Loubna HENNACH 2017</p>
-      </footer>
-
     </div> <!-- /container -->
 
   </body>

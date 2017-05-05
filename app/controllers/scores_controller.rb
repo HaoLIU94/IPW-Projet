@@ -24,6 +24,7 @@ class ScoresController < ApplicationController
   # POST /scores
   # POST /scores.json
   def create
+    sleep 5
     @score = Score.new(score_params)
 
     respond_to do |format|

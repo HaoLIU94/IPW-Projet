@@ -16,7 +16,7 @@
   <dd><%= @score.date %></dd>
 </dl>
 
-<%= link_to t('.back', :default => t("helpers.links.back")),
+<%= link_to t('.return', :default => t("helpers.links.back")),
               scores_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_score_path(@score), :class => 'btn btn-default' %>

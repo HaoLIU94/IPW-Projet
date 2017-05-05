@@ -56,4 +56,4 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 
-gem 'devise'
+gem "devise"
