@@ -57,3 +57,7 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 
 gem "devise"
+
+gem "haml"
+
+gem "html2haml"
