@@ -61,3 +61,5 @@ gem "devise"
 gem "haml"
 
 gem "html2haml"
+
+gem 'pg'

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="identifier.sqlite" uuid="4be6179e-5671-4a77-802f-32a56bceac58">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    <data-source name="development@localhost" uuid="18fe0b62-6358-4554-ac37-c182c443ac01">
+      <database-info product="PostgreSQL" version="9.5.6" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <first-sync>true</first-sync>
+      <user-name>ruby</user-name>
+      <introspection-schemas>postgres:*</introspection-schemas>
     </data-source>
   </component>
 </project>
