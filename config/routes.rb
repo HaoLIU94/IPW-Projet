@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
 
-  resource :profile
-  resources :hommes
-  devise_for :users
   get 'home/index'
-
-  get 'home/welcome'
 
   get 'home/about'
 
   get 'home/contact'
+
+  resource :profile
+  devise_for :users
+
+
 
   # Datatable
   resources :profs, :exams, :subjects, :scores, :students
@@ -29,5 +28,5 @@ Rails.application.routes.draw do
   namespace :admin do
           end
   #root
-  root 'welcome#index'
+  root 'home#index'
 end
