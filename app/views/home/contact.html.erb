@@ -1,24 +1,14 @@
 <div class="jumbotron">
-  <% if user_signed_in? %>
-      <h1>Welcome back, trusted user!</h1>
+      <h2>Hi, nice to meet you</h2>
       <p class="lead">
-        You have signed in!  If this were a real app some sweet conent
-        would go here.  But it's just a test.  You might want to sign out now.
+        We are Hao LIU and Loubna HENNACH. We are students from ENSIIE.<br>
+        We would like to hear from your opinion and advices.<br>
+        Don't hesitate to contact us<br>
+        <br>
+        <br>
+        <br>
+        Email:liuhaoxdu@gmail.com<br>
+        Github:HaoLIU94<br>
       </p>
-      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "btn btn-large btn-danger" %>
-  <% else %>
-      <h1>Welcome, new user!</h1>
-      <p class="lead">
-        You must sign in or sign up before you can access our secret content.
-      </p>
-      <div class="column-fluid">
-        <div class="span6">
-          <%= link_to "Sign In", new_user_session_path, :class=>'btn btn-primary' %>
-        </div>
-        <div class="span10">
-          <%= link_to "Sign Up", new_user_registration_path, :class=>'btn btn-primary' %>
-        </div>
-      </div>
-  <% end %>
 </div>
 <p>&copy;Hao LIU, Loubna HENNACH 2017</p>
