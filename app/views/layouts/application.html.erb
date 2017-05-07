@@ -54,6 +54,8 @@
         <li><%= link_to "Scores", scores_path  %></li>
         <li><%= link_to "Exams",  exams_path %></li>
         <li><%= link_to "Subjects", subjects_path  %></li>
+        <li><%= link_to "Profs", profs_path  %></li>
+        <li><%= link_to "Students", students_path  %></li>
         <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">All files <b class="caret"></b></a>
@@ -77,10 +79,11 @@
     </div>
   </div>
 </div>
-
-<%= form_tag(scores_path, method: "get", class: "navbar-form navbar-right", role: "search") do %>
+<% if user_signed_in? %>
+  <%= form_tag(scores_path, method: "get", class: "navbar-form navbar-right", role: "search") do %>
     <%= text_field_tag(:q, params[:q], placeholder: "Student name", class: "form-control input-sm") %>
-    <%= submit_tag("Search", class: "btn btn-info btn-sm") %>
+    <%= submit_tag("Search", :class=>'btn btn-primary') %>
+  <% end %>
 <% end %>
 
 <div class="container">
