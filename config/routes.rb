@@ -27,9 +27,7 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :admin do
-      resources :students
-      resources :profs
-  end
+          end
   #root
   root 'welcome#index'
 end

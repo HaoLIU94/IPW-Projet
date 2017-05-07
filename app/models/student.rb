@@ -1,2 +1,1 @@
-class Student < ApplicationRecord
-end
+class Student < User; end

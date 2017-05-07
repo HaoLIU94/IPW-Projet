@@ -4,4 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          :confirmable
+  self.inheritance_column = :type
+  def self.type
+    %w(Admin Prof Student)
+  end
 end
+
+class Admin < User; end
+class Prof < User; end
+class Student < User; end

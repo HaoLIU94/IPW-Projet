@@ -1,2 +1,1 @@
-class Prof < ApplicationRecord
-end
+class Prof < User; end

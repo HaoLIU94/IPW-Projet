@@ -32229,3 +32229,1276 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 113ms (Views: 109.4ms | ActiveRecord: 0.4ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (35.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (296.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "development"[0m
+  [1m[35m (337.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (151.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (217.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateScores (20170502143342)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (135.2ms)[0m  [1m[35mCREATE TABLE "scores" ("id" serial primary key, "student" character varying, "exam" character varying, "result" integer, "prof" character varying, "date" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170502143342"]]
+  [1m[35m (23.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSubjects (20170502144201)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (105.9ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" serial primary key, "name" character varying, "prof" character varying, "begin" character varying, "end" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170502144201"]]
+  [1m[35m (77.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExams (20170502144659)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.6ms)[0m  [1m[35mCREATE TABLE "exams" ("id" serial primary key, "name" character varying, "date" character varying, "prof" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170502144659"]]
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStudents (20170503090247)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (133.4ms)[0m  [1m[35mCREATE TABLE "students" ("id" serial primary key, "email" character varying, "password" character varying, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170503090247"]]
+  [1m[35m (43.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProfs (20170503121503)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (102.6ms)[0m  [1m[35mCREATE TABLE "profs" ("id" serial primary key, "email" character varying, "password" character varying, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170503121503"]]
+  [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20170505152308)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProfs (20170503121503)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "profs"[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20170503121503"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170505152308)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170505152308)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+Started GET "/" for 127.0.0.1 at 2017-05-07 15:35:27 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.1ms)
+Started GET "/" for 127.0.0.1 at 2017-05-07 15:35:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170505152308)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170505152308)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (81.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (46.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170505152308"]]
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAdmins (20170507133025)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507133025"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProfs (20170507133337)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (50.5ms)[0m  [1m[35mCREATE TABLE "profs" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507133337"]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-07 13:42:29 UTC], ["updated_at", 2017-05-07 13:42:29 UTC]]
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5015.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5016.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "development"[0m
+Started GET "/" for 127.0.0.1 at 2017-05-07 15:44:07 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 636ms (Views: 622.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 15:44:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 125ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 15:44:18 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KAdHr9MRtVFP3oa1mAj9AQ/tR2rGGZis0k9C2t5ReuXyVjIU9efChPYbe/nJzdevjPNM/UlBbtupywz9KgFotw==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.8ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KAdHr9MRtVFP3oa1mAj9AQ/tR2rGGZis0k9C2t5ReuXyVjIU9efChPYbe/nJzdevjPNM/UlBbtupywz9KgFotw==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 221ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-07 15:44:20 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-05-07 15:44:30 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAziH/DGOF8LBgo5QSEIzui8QnumfAAVrZ1x7jrk+PqbyRs/2PIPRV/KbyUUV1CmbZ5JjkHD9yXCju2VpoT4gw==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "liuhaoxdu@outlook.com"], ["encrypted_password", "$2a$11$BysHTFs39z4X5fGvK9gume614abDVSvZ/6qHw.IGp2wmDPAw04LCK"], ["created_at", 2017-05-07 13:44:30 UTC], ["updated_at", 2017-05-07 13:44:30 UTC]]
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-05-07 13:44:30 UTC], ["last_sign_in_at", 2017-05-07 13:44:30 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-05-07 13:44:30 UTC], ["id", 1]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 407ms (ActiveRecord: 36.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 15:44:30 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTypeToUsers (20170507134550)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "type" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507134550"]]
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20170507134817)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20170507134817)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (351.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "development"[0m
+  [1m[35m (345.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (776.2ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'unicode'[0m
+  [1m[35m (866.2ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'unicode'[0m
+  [1m[35m (119.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (110.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateScores (20170502143342)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (92.0ms)[0m  [1m[35mCREATE TABLE "scores" ("id" serial primary key, "student" character varying, "exam" character varying, "result" integer, "prof" character varying, "date" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170502143342"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSubjects (20170502144201)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (156.0ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" serial primary key, "name" character varying, "prof" character varying, "begin" character varying, "end" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170502144201"]]
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExams (20170502144659)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (105.9ms)[0m  [1m[35mCREATE TABLE "exams" ("id" serial primary key, "name" character varying, "date" character varying, "prof" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170502144659"]]
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20170505152308)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (74.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (25.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170505152308"]]
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTypeToUsers (20170507134550)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "type" character varying[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507134550"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAdmins (20170507134817)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20170507134817)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507134817"]]
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProfs (20170507134859)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.2ms)[0m  [1m[35mCREATE TABLE "profs" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507134859"]]
+  [1m[35m (20.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStudents (20170507140703)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170507140703"]]
+  [1m[35m (20.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-07 14:18:56 UTC], ["updated_at", 2017-05-07 14:18:56 UTC]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 395ms (Views: 380.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:03 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 16:27:05 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 173ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 16:27:11 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ewAy+wG8fuWTGijHSAV6kZCGBUpaVUWjBuvAnJ3QODKhUUdAJ0oJMCrf1YsZwFA/E5gO3dUNs9R9b467aYAqYA==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 20ms (ActiveRecord: 3.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ewAy+wG8fuWTGijHSAV6kZCGBUpaVUWjBuvAnJ3QODKhUUdAJ0oJMCrf1YsZwFA/E5gO3dUNs9R9b467aYAqYA==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 275ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 16:27:14 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-07 16:27:15 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 99ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-05-07 16:27:24 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pbi3y6U6M+91QAXoM0ljiPuqlbi/CCF3LKBPXo754Gn+fU7rjQ4E9SGMYPRmPzvgfoieTVi31kdDs9MlEpngEA==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "liuhaoxdu@outlook.com"], ["encrypted_password", "$2a$11$RLs9e/l2iRVIgWyiz3rtmuwDNUgWarVWt7I/QvnVQjcbC4GA5SMM6"], ["created_at", 2017-05-07 14:27:24 UTC], ["updated_at", 2017-05-07 14:27:24 UTC]]
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-05-07 14:27:24 UTC], ["last_sign_in_at", 2017-05-07 14:27:24 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-05-07 14:27:24 UTC], ["id", 1]]
+  [1m[35m (53.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 331ms (ActiveRecord: 86.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:25 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 74.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:28 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 144ms (Views: 138.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:29 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 82.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:29 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 125.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:35 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 149ms (Views: 144.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-07 16:27:37 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PjwMSFaFn8i+qT5v2tJOwkCy1zlmYW9O08MAH5Nqm4OhPJLt6Lo/bAOGwdG4lkmFULiiLD60RVMViE21fbNzTg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:37 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:38 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 126ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:39 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 148ms (Views: 142.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:39 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 156ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:27:51 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 135ms (Views: 129.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 16:27:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 16:28:01 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gg+PVeLgshuBg9SwaEBVC8KpMQtEQPWdTr0nb+33gp3F6iWFB9ylo+J9Sys9Krqee+VuSPvHH8jHf/VJ9LiYSg==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-05-07 14:28:01 UTC], ["sign_in_count", 2], ["updated_at", 2017-05-07 14:28:01 UTC], ["id", 1]]
+  [1m[35m (96.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 314ms (ActiveRecord: 99.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:28:01 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:44 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 107.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:45 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:46 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 127.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:46 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 123.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:47 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:47 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 116.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:48 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:49 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:50 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 108.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:50 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 130.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:51 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:51 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 88.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:52 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 104.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:53 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 130.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:53 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:53 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 122.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:30:55 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 122.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 16:33:27 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:33:29 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-07 16:33:34 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 93.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:33:34 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 107.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-07 16:33:35 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 118.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:33:35 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 105.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-05-07 16:33:36 +0200
+  
+ActionController::RoutingError (uninitialized constant StudentsController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [140 times] (29.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.1ms)
+Started GET "/profs" for 127.0.0.1 at 2017-05-07 16:33:40 +0200
+  
+ActionController::RoutingError (uninitialized constant ProfsController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [140 times] (35.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.4ms)
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:09 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:10 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 106.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:33 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:34 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (16.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 98.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:34 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 106.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:39 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (2.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (19.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 130.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:39 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 176ms (Views: 169.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:41 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 141.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:34:41 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:35:00 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:35:00 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 69.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:35:00 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 124ms (Views: 117.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:35:01 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 120.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:35:01 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 110.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-07 16:35:02 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 113.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:35:03 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (19.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 114.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-07 16:35:06 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (24.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 125.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-07 16:35:07 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.9ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (18.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 116.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:35:08 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (20.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 125.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:36:11 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:36:12 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (17.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 131ms (Views: 125.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scores/new" for 127.0.0.1 at 2017-05-07 16:36:22 +0200
+Processing by ScoresController#new as HTML
+  Rendering scores/new.html.erb within layouts/application
+  Rendered scores/_form.html.erb (5.2ms)
+  Rendered scores/new.html.erb within layouts/application (19.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 74.0ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/scores" for 127.0.0.1 at 2017-05-07 16:36:24 +0200
+Processing by ScoresController#create as JS
+  Parameters: {"utf8"=>"✓", "score"=>{"student"=>"", "exam"=>"", "result"=>"", "prof"=>"", "date"=>""}, "commit"=>"Create Score"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "scores" ("student", "exam", "prof", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["student", ""], ["exam", ""], ["prof", ""], ["date", ""], ["created_at", 2017-05-07 14:36:29 UTC], ["updated_at", 2017-05-07 14:36:29 UTC]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/scores/1
+Completed 200 OK in 5040ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/scores/1" for 127.0.0.1 at 2017-05-07 16:36:29 +0200
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering scores/show.html.erb within layouts/application
+  Rendered scores/show.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 79.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/scores/1" for 127.0.0.1 at 2017-05-07 16:36:43 +0200
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering scores/show.html.erb within layouts/application
+  Rendered scores/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores/1" for 127.0.0.1 at 2017-05-07 16:36:44 +0200
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering scores/show.html.erb within layouts/application
+  Rendered scores/show.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 90.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:36:46 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/scores/1" for 127.0.0.1 at 2017-05-07 16:36:52 +0200
+Processing by ScoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Eb+H/bzLcWb2v+2feG4GY5LP+YDfwmE5Z2c6OZFUmEkGKamhyCs8+mUS20Mm70+NyYqIcoYajfYluxE5ybbUuw==", "id"=>"1"}
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/scores
+Completed 302 Found in 28ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:36:52 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 90.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:38:28 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 82.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scores/new" for 127.0.0.1 at 2017-05-07 16:38:29 +0200
+Processing by ScoresController#new as HTML
+  Rendering scores/new.html.erb within layouts/application
+  Rendered scores/_form.html.erb (4.8ms)
+  Rendered scores/new.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/scores" for 127.0.0.1 at 2017-05-07 16:38:31 +0200
+Processing by ScoresController#create as JS
+  Parameters: {"utf8"=>"✓", "score"=>{"student"=>"", "exam"=>"", "result"=>"", "prof"=>"", "date"=>""}, "commit"=>"Create Score"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "scores" ("student", "exam", "prof", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["student", ""], ["exam", ""], ["prof", ""], ["date", ""], ["created_at", 2017-05-07 14:38:36 UTC], ["updated_at", 2017-05-07 14:38:36 UTC]]
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/scores/2
+Completed 200 OK in 5041ms (ActiveRecord: 30.8ms)
+
+
+Started GET "/scores/2" for 127.0.0.1 at 2017-05-07 16:38:36 +0200
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering scores/show.html.erb within layouts/application
+  Rendered scores/show.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/scores/2" for 127.0.0.1 at 2017-05-07 16:38:39 +0200
+Processing by ScoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kAJIEeg28OGfBHeevRSA9s6MZTWP1BHTjXh9qhD7X4qHlGZNnNa9fQypQULjlckYlckUx9YM/RzPpFaqSBkTeA==", "id"=>"2"}
+  [1m[36mScore Load (1.4ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "scores" WHERE "scores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/scores
+Completed 302 Found in 30ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-07 16:38:40 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scores/new" for 127.0.0.1 at 2017-05-07 16:38:41 +0200
+Processing by ScoresController#new as HTML
+  Rendering scores/new.html.erb within layouts/application
+  Rendered scores/_form.html.erb (17.3ms)
+  Rendered scores/new.html.erb within layouts/application (23.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 92.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-07 16:38:43 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 98.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/exams/new" for 127.0.0.1 at 2017-05-07 16:38:44 +0200
+Processing by ExamsController#new as HTML
+  Rendering exams/new.html.erb within layouts/application
+  Rendered exams/_form.html.erb (2.8ms)
+  Rendered exams/new.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 58.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/exams" for 127.0.0.1 at 2017-05-07 16:38:46 +0200
+Processing by ExamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zFIaDgYJ/jn0ULfoeBycTAqxS+kPsr9TYqfkoKo7wa54p9PfXYM4g1bq1MR6HpQkD2F9bD7eiAwl3ludTeg6MQ==", "exam"=>{"name"=>"", "date"=>"", "prof"=>""}, "commit"=>"Create Exam"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "exams" ("name", "date", "prof", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["date", ""], ["prof", ""], ["created_at", 2017-05-07 14:38:46 UTC], ["updated_at", 2017-05-07 14:38:46 UTC]]
+  [1m[35m (21.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/exams/1
+Completed 302 Found in 31ms (ActiveRecord: 23.2ms)
+
+
+Started GET "/exams/1" for 127.0.0.1 at 2017-05-07 16:38:46 +0200
+Processing by ExamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering exams/show.html.erb within layouts/application
+  Rendered exams/show.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 76.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-07 16:38:48 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.8ms)
+
+
