@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resource :profile
   resources :hommes
   devise_for :users
@@ -29,5 +31,5 @@ Rails.application.routes.draw do
       resources :profs
   end
   #root
-  root 'scores#index'
+  root 'welcome#index'
 end
