@@ -43551,3 +43551,1862 @@ Processing by ExamsController#index as HTML
 Completed 200 OK in 97ms (Views: 91.7ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:06 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 60.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:06 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:07 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 79.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:07 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.1ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 110.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:09 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:14 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 85.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:15 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.0ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (16.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 103.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:15 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (19.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 109.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:16 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.0ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 80.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:16 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 86.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:18:17 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:41 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:42 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.0ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 86.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:42 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:21:44 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:46 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 86.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:21:46 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:21:47 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:21:47 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:21:48 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:49 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 71.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:21:50 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 73.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:50 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:21:51 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:52 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 81.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:21:53 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 86.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:53 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 81.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:21:54 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 82.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:56 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 93.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:21:57 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 86.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:58 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (17.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 105.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:21:58 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 102.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:21:59 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (19.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 105.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:00 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (12.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 79.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:03 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 63.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:03 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 120.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:04 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (20.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 141ms (Views: 134.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:05 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (21.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 130.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:05 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 86.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:06 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 82.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:07 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:08 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (17.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 105.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:08 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.0ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (17.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 112.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:22:09 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (16.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 97.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:22:12 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:22:12 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:22:12 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 68.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:13 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 115.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:14 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (18.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 90.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:14 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.0ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 85.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:15 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (2.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 108.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:15 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:22:16 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 71.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:17 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 79.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:17 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (16.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 101.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scores/new" for 127.0.0.1 at 2017-05-08 12:22:20 +0200
+Processing by ScoresController#new as HTML
+  Rendering scores/new.html.erb within layouts/application
+  Rendered scores/_form.html.erb (5.7ms)
+  Rendered scores/new.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 60.3ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/scores" for 127.0.0.1 at 2017-05-08 12:22:22 +0200
+Processing by ScoresController#create as JS
+  Parameters: {"utf8"=>"✓", "score"=>{"student"=>"", "exam"=>"", "result"=>"", "prof"=>"", "date"=>""}, "commit"=>"Create Score"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "scores" ("student", "exam", "prof", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["student", ""], ["exam", ""], ["prof", ""], ["date", ""], ["created_at", 2017-05-08 10:22:27 UTC], ["updated_at", 2017-05-08 10:22:27 UTC]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/scores/1
+Completed 200 OK in 5034ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/scores/1" for 127.0.0.1 at 2017-05-08 12:22:27 +0200
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering scores/show.html.erb within layouts/application
+  Rendered scores/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 54.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:28 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 82.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams/new" for 127.0.0.1 at 2017-05-08 12:22:30 +0200
+Processing by ExamsController#new as HTML
+  Rendering exams/new.html.erb within layouts/application
+  Rendered exams/_form.html.erb (4.0ms)
+  Rendered exams/new.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 56.1ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/exams" for 127.0.0.1 at 2017-05-08 12:22:31 +0200
+Processing by ExamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EWVa84dzlfUGexLQ1XMC+6Lz3PRIXczGc1WfDfP6qmO4kjA50UtOyTIWPKd2gXGZopYbSxjh9vVZAEGBB3l7rg==", "exam"=>{"name"=>"", "date"=>"", "prof"=>""}, "commit"=>"Create Exam"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "exams" ("name", "date", "prof", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["date", ""], ["prof", ""], ["created_at", 2017-05-08 10:22:31 UTC], ["updated_at", 2017-05-08 10:22:31 UTC]]
+  [1m[35m (21.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/exams/1
+Completed 302 Found in 29ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/exams/1" for 127.0.0.1 at 2017-05-08 12:22:31 +0200
+Processing by ExamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExam Load (1.1ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering exams/show.html.erb within layouts/application
+  Rendered exams/show.html.erb within layouts/application (17.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 131.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:22:32 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2017-05-08 12:22:33 +0200
+Processing by SubjectsController#new as HTML
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/_form.html.erb (4.6ms)
+  Rendered subjects/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 55.5ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2017-05-08 12:22:35 +0200
+Processing by SubjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G9rzsK/3qyH/71pzyCGNnJEAz2F8uJc/3+RMiMGGTTxvA72l3IhKka963lqoPpr6fkBOGZKsKU+aqT8Cl2KGUw==", "subject"=>{"name"=>"", "prof"=>"", "begin"=>"", "end"=>""}, "commit"=>"Create Subject"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "prof", "begin", "end", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["prof", ""], ["begin", ""], ["end", ""], ["created_at", 2017-05-08 10:22:35 UTC], ["updated_at", 2017-05-08 10:22:35 UTC]]
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/subjects/1
+Completed 302 Found in 27ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/subjects/1" for 127.0.0.1 at 2017-05-08 12:22:35 +0200
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 65.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:22:36 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:22:36 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:39 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (19.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 83.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:42 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:22:42 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:22:43 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:22:44 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (2.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 94.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:23:51 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (234.4ms)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `exam' for #<#<Class:0x007f6cc003dbb0>:0x007f6cc037b700>):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(exam), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       score_path(exam),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_70052463927440'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_70052463927440'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:23:52 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (218.5ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `exam' for #<#<Class:0x007f6cc003dbb0>:0x007f6cc0e848e0>):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(exam), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       score_path(exam),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_70052534823260'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_70052534823260'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (78.2ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (100.3ms)
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:24:35 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:24:36 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:24:36 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:24:37 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (202.4ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `score_exam_path' for #<#<Class:0x007f6cc003dbb0>:0x00560e85523408>
+Did you mean?  score_path):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(score), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       exam_path(score),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_47310183357820'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_47310183357820'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:24:41 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (149.1ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `score_exam_path' for #<#<Class:0x007f6cc003dbb0>:0x007f6cc028a7d8>
+Did you mean?  score_path):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(score), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       exam_path(score),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_70052528543960'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_70052528543960'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:24:45 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:24:46 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:24:47 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:24:48 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:24:48 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (136.2ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `score_exam_path' for #<#<Class:0x007f6cc003dbb0>:0x00560e87650630>
+Did you mean?  score_path):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(score), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       exam_path(score),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_47310200541160'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_47310200541160'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:05 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (17.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:06 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 106.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:07 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (216.0ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `score_exam_path' for #<#<Class:0x007f6cc003dbb0>:0x007f6cac3eb9d8>
+Did you mean?  score_path):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(score), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       score_path(score),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_70052426719760'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_70052426719760'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:07 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (134.6ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `score_exam_path' for #<#<Class:0x007f6cc003dbb0>:0x007f6cc0bc9fb0>
+Did you mean?  score_path):
+    33:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    34:                       score_path(score), :class => 'btn btn-default btn-xs' %>
+    35:           <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    36:                       score_exam_path(score), :class => 'btn btn-default btn-xs' %>
+    37:           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    38:                       score_path(score),
+    39:                       :method => :delete,
+  
+app/views/scores/index.html.erb:36:in `block in _app_views_scores_index_html_erb___4329111648833369359_70052533392580'
+app/views/scores/index.html.erb:23:in `_app_views_scores_index_html_erb___4329111648833369359_70052533392580'
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/hao/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.3ms)
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:26 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:27 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:28 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:29 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 60.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:30 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:30 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:25:31 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:25:32 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:25:33 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:25:33 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:25:34 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:34 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:25:35 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:25:35 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:25:38 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:25:38 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:25:38 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:25:38 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:25:39 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (19.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 85.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:40 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 88.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:40 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (23.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 88.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:41 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:42 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 76.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:42 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.0ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (20.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 99.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:43 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (21.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 101.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:44 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 62.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:45 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:45 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:46 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:47 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:47 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (25.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 131.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:57 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:57 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (20.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 73.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:57 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (23.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 131ms (Views: 124.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:58 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 124.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:25:59 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (23.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 96.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:25:59 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (22.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 128.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:26:00 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 120.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:00 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (26.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 114.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:26:01 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (26.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 125.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:01 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.1ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (21.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 121.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:26:02 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (27.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 125.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:02 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (24.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 97.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:26:03 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 65.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:04 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 68.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:04 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:26:05 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 104.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:06 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.0ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (23.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 106.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:26:06 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  Rendered subjects/index.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 124ms (Views: 118.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:26:07 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  Rendered exams/index.html.erb within layouts/application (22.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 97.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:26:07 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (33.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 129.9ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-08 12:28:13 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"krh+90VVYJIWW3jeLYOW8zJa54dS7JuWVq9j82XaA/Pb5dzRnG0loBjJGxHjWhqCTjdtvhL4h+J0PnlvOTaQLQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:28:13 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 12:28:15 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 12:28:21 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"28wfeAFRaoIgmlzTra49NdWDK5lsegfbNlRwVJe7+tmEltAfK0bcKI+g755SRf7JlAk6iuOYe5lSU54BkMym1A==", "user"=>{"email"=>"liuhaoxdu@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "liuhaoxdu@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-05-08 10:28:21 UTC], ["last_sign_in_at", 2017-05-08 10:14:49 UTC], ["sign_in_count", 3], ["updated_at", 2017-05-08 10:28:21 UTC], ["id", 3]]
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 229ms (ActiveRecord: 29.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:28:21 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:28:23 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:28 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:29 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:29 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 66ms (Views: 60.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:30 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 76ms (Views: 68.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:31 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:31 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:33 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 73ms (Views: 67.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:33 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:34 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:35 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.9ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 91ms (Views: 84.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:35 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.2ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 97ms (Views: 89.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:36 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 110ms (Views: 102.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:37 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.6ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 98ms (Views: 91.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:37 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 141ms (Views: 132.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:38 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 116ms (Views: 108.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:39 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:39 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:40 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:40 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:41 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:41 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 128ms (Views: 119.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:42 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 118ms (Views: 109.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:43 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 93ms (Views: 86.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:43 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 123ms (Views: 114.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:44 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.8ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 93ms (Views: 87.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:44 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (1.3ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 127ms (Views: 119.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:45 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.1ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 114ms (Views: 107.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:45 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 123ms (Views: 112.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:46 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (1.3ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 116ms (Views: 106.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:46 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (3.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 113ms (Views: 103.1ms | ActiveRecord: 4.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-08 12:30:48 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8xmosNCSwwLnPWRU3UmL6uKmWZAhQqZMJpdbjqchEm5f3ZA6RXFhtKfzc6uwicSAoEzfXKAUHZBMosd12OprGA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:30:48 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 12:30:49 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 12:30:55 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xnx3LesMDF5Js2R5r13KlUn7zswje6W9n5yvg+JzVaCTIg4MxxvX6yE7rznhz14QsqzRpRYG+rWmeGIu/LX/zw==", "user"=>{"email"=>"liuhaoxdu@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-05-08 10:30:56 UTC], ["last_sign_in_at", 2017-05-08 10:16:30 UTC], ["sign_in_count", 7], ["updated_at", 2017-05-08 10:30:56 UTC], ["id", 2]]
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 204ms (ActiveRecord: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:30:56 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:30:58 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:30:58 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:30:59 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:30:59 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:31:00 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:31:00 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:31:00 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-08 12:31:01 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 12:31:01 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2017-05-08 12:31:01 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered subjects/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/exams" for 127.0.0.1 at 2017-05-08 12:31:02 +0200
+Processing by ExamsController#index as HTML
+  Rendering exams/index.html.erb within layouts/application
+  [1m[36mExam Load (0.5ms)[0m  [1m[34mSELECT "exams".* FROM "exams"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered exams/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scores" for 127.0.0.1 at 2017-05-08 12:31:02 +0200
+Processing by ScoresController#index as HTML
+  Rendering scores/index.html.erb within layouts/application
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered scores/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 1.0ms)
+
+

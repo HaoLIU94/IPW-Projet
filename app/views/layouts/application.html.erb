@@ -51,14 +51,21 @@
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-        <li><%= link_to "Scores", scores_path  %></li>
-        <li><%= link_to "Exams",  exams_path %></li>
-        <li><%= link_to "Subjects", subjects_path  %></li>
             <%if current_user.admin?%>
-            <li><%= link_to "Profs", new_user_registration_path  %></li>
-            <li><%= link_to "Students", new_user_registration_path  %></li>
-            <% else if current_user.prof? %>
+                <li><%= link_to "Scores", scores_path  %></li>
+                <li><%= link_to "Exams",  exams_path %></li>
+                <li><%= link_to "Subjects", subjects_path  %></li>
+                <li><%= link_to "Profs", new_user_registration_path  %></li>
                 <li><%= link_to "Students", new_user_registration_path  %></li>
+            <% else if current_user.prof? %>
+                <li><%= link_to "Scores", scores_path  %></li>
+                <li><%= link_to "Exams",  exams_path %></li>
+                <li><%= link_to "Subjects", subjects_path  %></li>
+                <li><%= link_to "Students", new_user_registration_path  %></li>
+            <% else %>
+                <li><%= link_to "Scores", scores_path  %></li>
+                <li><%= link_to "Exams",  exams_path %></li>
+                <li><%= link_to "Subjects", subjects_path  %></li>
                 <% end %>
             <% end %>
         <% end %>

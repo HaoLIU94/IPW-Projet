@@ -30,14 +30,25 @@
         <td><%= score.date %></td>
         <td><%=l score.created_at %></td>
         <td>
+          <%if current_user.admin? or current_user.prof? %>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       score_path(score), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      score_path(score), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      score_path(score),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+          <%end %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<%if current_user.admin? or current_user.prof? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_score_path,
             :class => 'btn btn-primary' %>
+<%end %>
