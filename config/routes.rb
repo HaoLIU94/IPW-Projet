@@ -12,17 +12,7 @@ Rails.application.routes.draw do
 
 
   # Datatable
-  resources :profs, :exams, :subjects, :scores, :students
-
-  # Students
-  resources :students do
-    resources :subjects, :scores, :exams
-  end
-
-  # Profs
-  resources :profs do
-    resources :subjects, :scores, :exams
-  end
+  resources :exams, :subjects, :scores
 
   # Admin
   namespace :admin do

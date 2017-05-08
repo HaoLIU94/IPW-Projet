@@ -9,7 +9,3 @@ class User < ApplicationRecord
     %w(Admin Prof Student)
   end
 end
-
-class Admin < User; end
-class Prof < User; end
-class Student < User; end
