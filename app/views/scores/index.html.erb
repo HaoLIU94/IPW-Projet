@@ -19,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @scores.where(:user_id => current_user).each do |score| %>
+  <% @scores.each do |score| %>
       <tr>
         <td><%= score.student %></td>
         <td><%= score.exam %></td>
