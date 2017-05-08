@@ -9,7 +9,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:student) %></th>
       <th><%= model_class.human_attribute_name(:exam) %></th>
       <th><%= model_class.human_attribute_name(:result) %></th>
@@ -20,9 +19,8 @@
     </tr>
   </thead>
   <tbody>
-    <% @scores.each do |score| %>
+    <% @scores.where(:user_id => current_user).each do |score| %>
       <tr>
-        <td><%= link_to score.id, score_path(score) %></td>
         <td><%= score.student %></td>
         <td><%= score.exam %></td>
         <td><%= score.result %></td>

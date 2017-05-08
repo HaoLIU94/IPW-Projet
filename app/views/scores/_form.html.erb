@@ -22,6 +22,13 @@
     </div>
     <%=f.error_span(:student) %>
   </div>
+    <div class="form-group">
+      <%= f.label :student, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+        <%= f.text_field :user_id, :class => 'form-control' %>
+      </div>
+      <%=f.error_span(:student) %>
+    </div>
   <div class="form-group">
     <%= f.label :exam, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -53,7 +60,7 @@
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary', :data => { :"disable-with" => "Wait a second..." } %>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 scores_path, :class => 'btn btn-default' %>
     </div>
