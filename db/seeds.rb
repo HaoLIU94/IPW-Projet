@@ -8,3 +8,13 @@
 
 User.create(email:"loubna.hennach@hotmail.fr",password:"loubna",password_confirmation:"loubna",admin:true,student:false)
 User.create(email:"liuhaoxdu@outlook.com",password:"liuhao",password_confirmation:"liuhao",admin:true,student:false)
+User.create(email:"student0@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student1@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student2@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student3@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student4@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student5@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student6@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student7@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student8@ensiie.com",password:"student",password_confirmation:"student")
+User.create(email:"student9@ensiie.com",password:"student",password_confirmation:"student")
