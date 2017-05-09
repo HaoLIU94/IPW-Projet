@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   get 'home/contact'
 
   resource :profile, only: [:show]
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+
+  get "users/confirmations"
 
   # Datatable
   resources :exams, :subjects, :scores
