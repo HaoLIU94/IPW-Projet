@@ -64043,3 +64043,88 @@ Processing by ShowController#students as HTML
 Completed 200 OK in 106ms (Views: 99.7ms | ActiveRecord: 1.7ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "loubna.hennach@hotmail.fr"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "liuhaoxdu@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "prof0@ensiie.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prof", "student") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "prof0@ensiie.com"], ["encrypted_password", "$2a$11$gHscMYXUJyaGerCrTbDmAefjbwBN7UndkVGvYVfbRgEWnXNmSJaa2"], ["created_at", 2017-05-10 12:07:12 UTC], ["updated_at", 2017-05-10 12:07:12 UTC], ["prof", true], ["student", false]]
+  [1m[35m (79.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "prof1@ensiie.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prof", "student") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "prof1@ensiie.com"], ["encrypted_password", "$2a$11$bC3fJV/o/DAxRCO4fSfB2OqXrCoAzrMkfczYp/v82SxQTYuY51bp2"], ["created_at", 2017-05-10 12:07:12 UTC], ["updated_at", 2017-05-10 12:07:12 UTC], ["prof", true], ["student", false]]
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "prof2@ensiie.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prof", "student") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "prof2@ensiie.com"], ["encrypted_password", "$2a$11$8PcBXcRxAmzU4LNcT3uGu.D/oOEzNhddwQHqZrEJEa4ThAOXSwaD2"], ["created_at", 2017-05-10 12:07:12 UTC], ["updated_at", 2017-05-10 12:07:12 UTC], ["prof", true], ["student", false]]
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "prof3@ensiie.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prof", "student") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "prof3@ensiie.com"], ["encrypted_password", "$2a$11$fWN/MM5H7ZVHslqFCdtj/.DFa0aTzI5A1D5HE7mHdV5mtEV.n8HhO"], ["created_at", 2017-05-10 12:07:13 UTC], ["updated_at", 2017-05-10 12:07:13 UTC], ["prof", true], ["student", false]]
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "prof4@ensiie.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prof", "student") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "prof4@ensiie.com"], ["encrypted_password", "$2a$11$qNevY5QzrNIub.MA9tP9t.82pexLjwvKvX2ovfBR3iTMq4RWGEYYG"], ["created_at", 2017-05-10 12:07:13 UTC], ["updated_at", 2017-05-10 12:07:13 UTC], ["prof", true], ["student", false]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student0@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student1@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student2@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student3@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student4@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student5@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student6@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student7@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student8@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "student9@ensiie.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/show/students" for 127.0.0.1 at 2017-05-10 14:07:24 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShowController#students as HTML
+  Rendering show/students.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."student" = $1[0m  [["student", true]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered show/students.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 488ms (Views: 470.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/show/profs" for 127.0.0.1 at 2017-05-10 14:07:26 +0200
+Processing by ShowController#profs as HTML
+  Rendering show/profs.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."prof" = $1[0m  [["prof", true]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered show/profs.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/show/profs" for 127.0.0.1 at 2017-05-10 14:07:27 +0200
+Processing by ShowController#profs as HTML
+  Rendering show/profs.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."prof" = $1[0m  [["prof", true]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered show/profs.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 102ms (Views: 97.0ms | ActiveRecord: 1.8ms)
+
+
