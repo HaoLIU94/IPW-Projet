@@ -4,17 +4,15 @@
 
 <%- model_class = User -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h2>Profile information</h2>
 </div>
 <table class="table table-striped">
   <thead>
   <tr>
-    <th><%= model_class.human_attribute_name(:email) %></th>
-    <th><%= model_class.human_attribute_name(:admin) %></th>
-    <th><%= model_class.human_attribute_name(:prof) %></th>
-    <th><%= model_class.human_attribute_name(:student) %></th>
     <th><%= model_class.human_attribute_name(:first_name) %></th>
     <th><%= model_class.human_attribute_name(:last_name) %></th>
+    <th><%= model_class.human_attribute_name(:User_type) %></th>
+    <th><%= model_class.human_attribute_name(:email) %></th>
     <th><%= model_class.human_attribute_name(:created_at) %></th>
     <th><%= model_class.human_attribute_name(:last_sign_in_at) %></th>
     <th><%= model_class.human_attribute_name(:sign_in_count) %></th>
@@ -23,18 +21,25 @@
   </thead>
   <tbody>
   <% user = current_user %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= user.admin %></td>
-        <td><%= user.prof %></td>
-        <td><%= user.student %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.created_at%></td>
-        <td><%= user.last_sign_in_at %></td>
-        <td><%= user.sign_in_count%></td>
+  <tr>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td> <%if current_user.admin?%>
+              <%=  'Administrator' %>
+         <%else if current_user.prof?%>
+              <%= 'Professor' %>
+         <%else if current_user.student?%>
+              <%= 'Student' %>
+         <%end%>
+         <%end%>
+         <%end%>
+    </td>
+    <td><%= user.email %>
+    <td><%= user.student %></td>
+    <td><%= user.created_at%></td>
+    <td><%= user.last_sign_in_at %></td>
+    <td><%= user.sign_in_count%></td>
 
-      </tr>
+  </tr>
   </tbody>
 </table>
-
