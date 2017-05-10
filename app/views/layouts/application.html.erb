@@ -58,7 +58,7 @@
                 <li><%= link_to "Admins", show_admins_path  %></li>
                 <li><%= link_to "Profs", show_profs_path  %></li>
                 <li><%= link_to "Students", show_students_path  %></li>
-                <li><%= link_to "Comfirmation", users_confirmations_path  %></li>
+                <li><%= link_to "Comfirmation", users_confirmations_new_path  %></li>
             <% else if current_user.prof? %>
                 <li><%= link_to "Scores", scores_path  %></li>
                 <li><%= link_to "Exams",  exams_path %></li>
