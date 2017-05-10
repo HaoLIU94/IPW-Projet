@@ -1,0 +1,33 @@
+<%= content_for :page_stylesheet do %>
+    <!-- 这是 index.html.erb 里单独使用的 -->
+<% end %>
+
+<%- model_class = User -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= model_class.human_attribute_name(:email) %></th>
+    <th><%= model_class.human_attribute_name(:admin) %></th>
+    <th><%= model_class.human_attribute_name(:prof) %></th>
+    <th><%= model_class.human_attribute_name(:student) %></th>
+    <th><%= model_class.human_attribute_name(:first_name) %></th>
+    <th><%= model_class.human_attribute_name(:last_name) %></th>
+    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% user = current_user %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.admin %></td>
+        <td><%= user.prof %></td>
+        <td><%= user.student %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+      </tr>
+  </tbody>
+</table>
+
