@@ -14,12 +14,14 @@
       <p class="lead">
         You must sign in or sign up before you can access our secret content.
       </p>
-      <div class="column-fluid">
-        <div class="span6">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1">
           <%= link_to "Sign In", new_user_session_path, :class=>'btn btn-primary btn-md ' %>
         </div>
-        <div class="span10">
+          <div class="col-sm-11">
           <%= link_to "Sign Up", new_user_registration_path, :class=>'btn btn-primary  btn-md ' %>
+        </div>
         </div>
       </div>
   <% end %>
