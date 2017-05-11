@@ -14,9 +14,7 @@ Rails.application.routes.draw do
 
   get 'show/profile'
 
-  devise_for :users, controllers: { sessions: 'users/sessions',confirmations: 'users/confirmations'}
-
-  get 'users/confirmations/new'
+  devise_for :users, controllers: { sessions: 'users/sessions'}
 
   # Datatable
   resources :exams, :subjects, :scores
