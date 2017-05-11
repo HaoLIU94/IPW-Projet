@@ -1,15 +1,18 @@
 <div class="jumbotron">
   <% if user_signed_in? %>
       <% if current_user.admin?%>
-          <h2>Welcome back, Administrator!</h2>
-      <%else%>
+          <h2>Welcome back, Administrator</h2>
+         <%else if current_user.prof?%>
+          <h2>Welcome back, professor!</h2>
+         <% else %>
           <h2>Welcome back, dear student!</h2>
-          <p class="lead">
-            You've successfully signed in!  If this were a real app some sweet conent
-            would go here.  But it's just a test.  You might want to sign out now.
-          </p>
-      <% end %>
-  <% else %>
+          <% end %>
+        <% end %>
+      <p class="lead">
+        You've successfully signed in!  If this were a real app some sweet conent
+        would go here.  But it's just a test.  You might want to sign out now.
+      </p>
+<% else %>
       <h2>Welcome to my transcript!</h2>
       <p class="lead">
         You must sign in or sign up before you can access our secret content.
