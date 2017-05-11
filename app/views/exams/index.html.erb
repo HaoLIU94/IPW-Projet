@@ -13,16 +13,14 @@
     </tr>
   </thead>
   <tbody>
-    <% @exams.each do |exam| %>
+    <% @exams.each do |exam| @subject = Subject.find(id=exam.subjects_id)  %>
       <tr>
-        <td><%= exam.name %></td>
+        <td><%= @subject.name %></td>
         <td><%= exam.date %></td>
         <td><%= exam.prof %></td>
         <td><%=l exam.created_at %></td>
         <td>
           <%if current_user.admin? or current_user.prof? %>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      exam_path(exam), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_exam_path(exam), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

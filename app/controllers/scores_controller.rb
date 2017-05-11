@@ -70,6 +70,6 @@ class ScoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def score_params
-      params.require(:score).permit(:student, :user_id, :exam, :result, :prof, :date)
+      params.require(:score).permit(:student, :user_id, :exam,:exams_id, :result, :prof, :date)
     end
 end

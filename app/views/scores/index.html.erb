@@ -22,17 +22,16 @@
 
   <% if current_user.admin or current_user.prof %>
       <% @scores.each do |score| @user1 = User.find(id=score.user_id) %>
+         <% @exam = Exam.find(id=score.exams_id) %>
           <tr>
             <td><%= @user1.first_name %></td>
             <td><%= @user1.last_name %></td>
-            <td><%= score.exam %></td>
+            <td><%= @exam.name %></td>
             <td><%= score.result %></td>
             <td><%= current_user.last_name %></td>
             <td><%=l score.created_at %></td>
             <td>
               <%if current_user.admin? or current_user.prof? %>
-                  <%= link_to t('.show', :default => t("helpers.links.show")),
-                              score_path(score), :class => 'btn btn-default btn-xs' %>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               score_path(score), :class => 'btn btn-default btn-xs' %>
                   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

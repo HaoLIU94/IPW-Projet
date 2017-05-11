@@ -16,18 +16,18 @@
   <% end %>
 
     <div class="form-group">
-      <%= f.label :id_number, :class => 'control-label col-lg-2' %>
+      <%= f.label :id_student, :class => 'control-label col-lg-2' %>
       <div class="col-lg-10">
         <%= f.text_field :user_id, :class => 'form-control' %>
       </div>
       <%=f.error_span(:user_id) %>
     </div>
   <div class="form-group">
-    <%= f.label :exam, :class => 'control-label col-lg-2' %>
+    <%= f.label :id_exam, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :exam, :class => 'form-control' %>
+      <%= f.text_field :exams_id, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:exam) %>
+    <%=f.error_span(:exams_id) %>
   </div>
   <div class="form-group">
     <%= f.label :result, :class => 'control-label col-lg-2' %>

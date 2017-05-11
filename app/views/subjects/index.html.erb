@@ -23,8 +23,6 @@
         <td><%=l subject.created_at %></td>
         <td>
           <%if current_user.admin? or current_user.prof? %>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      subject_path(subject), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_subject_path(subject), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
