@@ -9,7 +9,8 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:student) %></th>
+      <th><%= model_class.human_attribute_name(:first_name) %></th>
+      <th><%= model_class.human_attribute_name(:last_name) %></th>
       <th><%= model_class.human_attribute_name(:exam) %></th>
       <th><%= model_class.human_attribute_name(:result) %></th>
       <th><%= model_class.human_attribute_name(:prof) %></th>
@@ -19,12 +20,14 @@
     </tr>
   </thead>
   <tbody>
-  <% @scores.each do |score| %>
+  <% @scores.each do |score| @user1 = User.find(id=score.user_id)%>
+
       <tr>
-        <td><%= score.student %></td>
+        <td><%= @user1.first_name %></td>
+        <td><%= @user1.last_name %></td>
         <td><%= score.exam %></td>
         <td><%= score.result %></td>
-        <td><%= score.prof %></td>
+        <td><%= current_user.last_name %></td>
         <td><%= score.date %></td>
         <td><%=l score.created_at %></td>
         <td>
