@@ -18,9 +18,9 @@
   <div class="form-group">
     <%= f.label :Id_subject, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :subjects_id, :class => 'form-control' %>
+      <%= f.text_field :subject_id, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:subjects_id) %>
+    <%=f.error_span(:subject_id) %>
   </div>
   <div class="form-group">
     <%= f.label :date, :class => 'control-label col-lg-2' %>
@@ -29,13 +29,6 @@
     </div>
     <%=f.error_span(:date) %>
   </div>
-    <div class="form-group">
-      <%= f.label :prof, :class => 'control-label col-lg-2' %>
-      <div class="col-lg-10">
-        <%= f.text_field :prof, :class => 'form-control' %>
-      </div>
-      <%=f.error_span(:prof) %>
-    </div>
     <div class="form-group">
       <%= f.label :id_professor, :class => 'control-label col-lg-2' %>
       <div class="col-lg-10">
