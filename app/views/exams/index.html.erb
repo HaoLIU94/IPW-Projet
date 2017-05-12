@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th><%= model_class.human_attribute_name(:id_exam) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:date) %></th>
       <th><%= model_class.human_attribute_name(:prof) %></th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @exams.each do |exam| @subject = Subject.find(id=exam.subjects_id)  %>
       <tr>
+        <td><%= exam.id %></td>
         <td><%= @subject.name %></td>
         <td><%= exam.date %></td>
         <td><%= exam.prof %></td>
