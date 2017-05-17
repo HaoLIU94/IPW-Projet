@@ -15,9 +15,7 @@
 <% else %>
       <h2>Welcome to my transcript!</h2>
       <p class="lead">
-        You must sign in before you can access our secret content.<br>
-        If you don't possess an account right now, you can click "registration" to demand one<br>
-        But your account won't be available until our Admin activate it.
+        You must sign in or sign up before you can access our secret content.
       </p>
       <div class="container">
         <div class="row">
@@ -25,7 +23,7 @@
           <%= link_to "Sign In", new_user_session_path, :class=>'btn btn-primary btn-md ' %>
         </div>
           <div class="col-sm-11">
-          <%= link_to "Registration", new_registration_path, :class=>'btn btn-primary  btn-md ' %>
+          <%= link_to "Sign Up", new_user_registration_path, :class=>'btn btn-primary  btn-md ' %>
         </div>
         </div>
       </div>

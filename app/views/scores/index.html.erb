@@ -48,15 +48,12 @@
       <% end %>
   <% else %>
       <% @scores.where(:user_id=>current_user.id).each do |score| @user1 = User.find(id=score.user_id)%>
-          <% @exam = Exam.find(id=score.exam_id)%>
-          <% @subject = Subject.find(id=@exam.subject_id)%>
-          <% @user2 = User.find(id=@subject.user_id)%>
       <tr>
         <td><%= @user1.first_name %></td>
         <td><%= @user1.last_name %></td>
-        <td><%= @subject.name %></td>
+        <td><%= score.exam %></td>
         <td><%= score.result %></td>
-        <td><%= @user2.last_name %></td>
+        <td><%= current_user.last_name %></td>
         <td><%=l score.created_at %></td>
         <td>
           <%if current_user.admin? or current_user.prof? %>

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :registrations
   get 'show/admins'
 
   get 'show/profs'
