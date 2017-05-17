@@ -17,6 +17,7 @@
     <% @subjects.each do |subject| @user=User.find(id=subject.user_id)%>
       <tr>
         <td><%= subject.id %></td>
+        <td><%= subject.name %></td>
         <td><%= @user.last_name %></td>
         <td><%= subject.begin %></td>
         <td><%= subject.end %></td>
