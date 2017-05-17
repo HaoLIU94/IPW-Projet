@@ -20,7 +20,7 @@
       <div class="col-lg-10">
         <%= f.collection_select :user_id, User.all.where(:prof => true),:id,:last_name, prompt: true %>
       </div>
-      <%=f.error_span(:name) %>
+      <%=f.error_span(:user_id) %>
     </div>
 
 
