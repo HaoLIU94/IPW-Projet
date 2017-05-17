@@ -9,7 +9,6 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th><%= model_class.human_attribute_name(:Id_professor) %></th>
     <th><%= model_class.human_attribute_name(:first_name) %></th>
     <th><%= model_class.human_attribute_name(:last_name) %></th>
     <th><%= model_class.human_attribute_name(:User_type) %></th>
@@ -21,7 +20,6 @@
   <% @users = User.all %>
   <% @users.where(:prof => true).each do |user| %>
       <tr>
-        <td><%= user.id %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td> <%if user.admin?%>
