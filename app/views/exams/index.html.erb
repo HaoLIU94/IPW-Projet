@@ -1,11 +1,12 @@
 <%- model_class = Exam -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h2>Exam list</h2>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:subject) %></th>
       <th><%= model_class.human_attribute_name(:date) %></th>
       <th><%= model_class.human_attribute_name(:prof) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -16,6 +17,7 @@
     <% @exams.each do |exam| @subject = Subject.find(id=exam.subject_id)  %>
       <% @user=User.find(id=@subject.user_id)%>
       <tr>
+        <td><%= exam.name %></td>
         <td><%= @subject.name %></td>
         <td><%= exam.date %></td>
         <td><%= @user.last_name %></td>
