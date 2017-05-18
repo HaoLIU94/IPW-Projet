@@ -36,8 +36,7 @@ Exam.create(name:"MST-Contrôle continue",subject_id:2,date:"23/05/2017",user_id
 Exam.create(name:"EMI-Contrôle",subject_id:3,date:"25/04/2017",user_id:19,prof:"M.Zervos")
 
 
-Score.create(user_id:8,exam_id:1,result:"18",prof:"M.Genaud")
-Score.create(user_id:9,exam_id:1,result:"16",prof:"M.Genaud")
+
 Score.create(user_id:10,exam_id:1,result:"12",prof:"M.Genaud")
 Score.create(user_id:11,exam_id:1,result:"10",prof:"M.Genaud")
 Score.create(user_id:12,exam_id:1,result:"15",prof:"M.Genaud")
@@ -46,9 +45,10 @@ Score.create(user_id:14,exam_id:1,result:"11",prof:"M.Genaud")
 Score.create(user_id:15,exam_id:1,result:"14",prof:"M.Genaud")
 Score.create(user_id:16,exam_id:1,result:"17",prof:"M.Genaud")
 Score.create(user_id:17,exam_id:1,result:"13",prof:"M.Genaud")
+Score.create(user_id:18,exam_id:1,result:"18",prof:"M.Genaud")
+Score.create(user_id:19,exam_id:1,result:"16",prof:"M.Genaud")
 
-Score.create(user_id:8,exam_id:2,result:"12",prof:"M.Perinel")
-Score.create(user_id:9,exam_id:2,result:"15",prof:"M.Perinel")
+
 Score.create(user_id:10,exam_id:2,result:"18",prof:"M.Perinel")
 Score.create(user_id:11,exam_id:2,result:"16",prof:"M.Perinel")
 Score.create(user_id:12,exam_id:2,result:"13",prof:"M.Perinel")
@@ -57,6 +57,8 @@ Score.create(user_id:14,exam_id:2,result:"16",prof:"M.Perinel")
 Score.create(user_id:15,exam_id:2,result:"11",prof:"M.Perinel")
 Score.create(user_id:16,exam_id:2,result:"10",prof:"M.Perinel")
 Score.create(user_id:17,exam_id:2,result:"15",prof:"M.Perinel")
+Score.create(user_id:18,exam_id:2,result:"12",prof:"M.Perinel")
+Score.create(user_id:19,exam_id:2,result:"15",prof:"M.Perinel")
 
 Score.create(user_id:8,exam_id:3,result:"17",prof:"M.Zervos")
 Score.create(user_id:9,exam_id:3,result:"12",prof:"M.Zervos")
@@ -68,3 +70,5 @@ Score.create(user_id:14,exam_id:3,result:"17",prof:"M.Zervos")
 Score.create(user_id:15,exam_id:3,result:"15",prof:"M.Zervos")
 Score.create(user_id:16,exam_id:3,result:"14",prof:"M.Zervos")
 Score.create(user_id:17,exam_id:3,result:"11",prof:"M.Zervos")
+Score.create(user_id:18,exam_id:3,result:"17",prof:"M.Zervos")
+Score.create(user_id:19,exam_id:3,result:"12",prof:"M.Zervos")
