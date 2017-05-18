@@ -13,6 +13,9 @@ User.create(email:"professor1@ensiie.fr",password:"professor",password_confirmat
 User.create(email:"professor2@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Kils",first_name:"Yann")
 User.create(email:"professor3@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Soulier",first_name:"Frédéric")
 User.create(email:"professor4@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Unbekandt",first_name:"Léo")
+User.create(email:"professor5@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Perinel",first_name:"
+Emmanuel")
+User.create(email:"professor6@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Zervos",first_name:"Vasilis")
 User.create(email:"student0@ensiie.fr",password:"student",password_confirmation:"student",last_name:"LI",first_name:"Min")
 User.create(email:"student1@ensiie.fr",password:"student",password_confirmation:"student",last_name:"WANG",first_name:"Xihui")
 User.create(email:"student2@ensiie.fr",password:"student",password_confirmation:"student",last_name:"Ben jedidia",first_name:"Hanna")
@@ -23,17 +26,14 @@ User.create(email:"student6@ensiie.fr",password:"student",password_confirmation:
 User.create(email:"student7@ensiie.fr",password:"student",password_confirmation:"student",last_name:"Di Martino",first_name:"Sacha")
 User.create(email:"student8@ensiie.fr",password:"student",password_confirmation:"student",last_name:"Lo Monaco",first_name:"Damien")
 User.create(email:"student9@ensiie.fr",password:"student",password_confirmation:"student",last_name:"Fraise",first_name:"Aymeric")
-User.create(email:"professor5@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Perinel",first_name:"
-Emmanuel")
-User.create(email:"professor6@ensiie.fr",password:"professor",password_confirmation:"professor",prof:true,student:false,last_name:"Zervos",first_name:"Vasilis")
 
 Subject.create(name:"IPA",user_id:3,prof:"M.Genaud",begin:"15/02/2017",end:"15/03/2017")
-Subject.create(name:"MST",user_id:18,prof:"M.Perinel",begin:"07/02/2017",end:"23/05/2017")
-Subject.create(name:"EMI",user_id:19,prof:"M.Zervos",begin:"12/03/2017",end:"25/04/2017")
+Subject.create(name:"MST",user_id:8,prof:"M.Perinel",begin:"07/02/2017",end:"23/05/2017")
+Subject.create(name:"EMI",user_id:9,prof:"M.Zervos",begin:"12/03/2017",end:"25/04/2017")
 
-Exam.create(subject_id:1,date:"15/03/2017",user_id:3,prof:"M.Genaud")
-Exam.create(subject_id:2,date:"23/05/2017",user_id:18,prof:"M.Perinel")
-Exam.create(subject_id:3,date:"25/04/2017",user_id:19,prof:"M.Zervos")
+Exam.create(name:"IPA-tpnoté",subject_id:1,date:"15/03/2017",user_id:3,prof:"M.Genaud")
+Exam.create(name:"MST-Contrôle continue",subject_id:2,date:"23/05/2017",user_id:18,prof:"M.Perinel")
+Exam.create(name:"EMI-Contrôle",subject_id:3,date:"25/04/2017",user_id:19,prof:"M.Zervos")
 
 
 Score.create(user_id:8,exam_id:1,result:"18",prof:"M.Genaud")
