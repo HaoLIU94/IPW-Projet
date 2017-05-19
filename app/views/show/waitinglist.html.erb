@@ -1,10 +1,11 @@
 <%- model_class = User -%>
 <div class="page-header">
-  <h2>Student list</h2>
+  <h2>Waiting list</h2>
 </div>
 <table class="table table-striped">
   <thead>
   <tr>
+    <th><%= model_class.human_attribute_name(:last_name) %></th>
     <th><%= model_class.human_attribute_name(:first_name) %></th>
     <th><%= model_class.human_attribute_name(:email) %></th>
     <th><%= model_class.human_attribute_name(:approved_state) %></th>
@@ -14,15 +15,27 @@
   <tbody>
   <% @users= User.where(approved: false) %>
   <% @users.each do |user|%>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.approved %></td>
-        <td><%= link_to "Edit", edit_user_path(user),:class => 'btn btn-default btn-xs' %></td>
-      </tr>
+
+  <tr>
+    <td><%= user.last_name %></td>
+    <td><%= user.first_name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.approved %></td>
+    <%if current_user.admin?%>
+        <td> <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                    edit_user_path(user), :class => 'btn btn-default btn-xs' %>
+        <td> <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                    user_path(user),
+                    :method => :delete,
+                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                    :class => 'btn btn-xs btn-danger' %>  </td>
+    <%end%>
   <%end%>
+  </tr>
 
 
   </tbody>
 </table>
+
+
 

@@ -19,7 +19,15 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to show_students_path
+    if @user.prof
+      redirect_to show_profs_path
+    end
+    if @user.student
+      redirect_to show_students_path
+    end
+    if @user.approved!
+      redirect_to show_waitinglist_path
+    end
   end
 
   # GET /users/1/edit
@@ -47,7 +55,7 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permi.permit(:role, :user_name)
+    params.require(:user).permi.permit(:role, :user_nam)
   end
 
 end
