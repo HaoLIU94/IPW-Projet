@@ -36,7 +36,11 @@ class UsersController < ApplicationController
   # # PATCH/PUT /users/1
   # # PATCH/PUT /users/1.json
   def update
-    if @user.update(user_params)
+    p = user_params
+    if !p.has_key? :student
+      p[:student] = false
+    end
+    if @user.update(p)
       redirect_to show_waitinglist_path, notice: 'User was successfully updated.'
     else
       render :edit
@@ -51,7 +55,7 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:role, :user_name, :approved, :prof)
+    params.require(:user).permit(:role, :user_name, :approved, :prof,:student,:email)
   end
 
 end

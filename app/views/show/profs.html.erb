@@ -36,9 +36,9 @@
         <td>
           <%if current_user.admin?%>
               <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                          edit_user_registration_path(user), :class => 'btn btn-default btn-xs' %>
+                          edit_user_path(user), :class => 'btn btn-default btn-xs' %>
               <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                          registration_path(user),
+                          user_path(user),
                           :method => :delete,
                           :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                           :class => 'btn btn-xs btn-danger' %>

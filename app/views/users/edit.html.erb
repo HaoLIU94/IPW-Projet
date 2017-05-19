@@ -5,6 +5,10 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+    <div class="field">
+      <%= f.label "Activate account" %> <br />
+      <%= f.check_box :approved, {}, true, false %> <br />
+    </div>
 
     <div class="field">
       <%= f.label "As a professor" %> <br />
@@ -12,14 +16,9 @@
     </div>
 
     <div class="field">
-      <%= f.label "Activate account" %> <br />
-      <%= f.check_box :approved, {}, true, false %> <br />
+      <%= f.label "As a student" %> <br />
+      <%= f.check_box :student, {}, true, false %> <br />
     </div>
-
-    <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
 
   <div class="actions">
     <%= f.submit "Update" %>
