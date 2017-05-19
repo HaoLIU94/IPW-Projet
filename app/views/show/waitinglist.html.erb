@@ -1,0 +1,28 @@
+<%- model_class = User -%>
+<div class="page-header">
+  <h2>Student list</h2>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= model_class.human_attribute_name(:first_name) %></th>
+    <th><%= model_class.human_attribute_name(:email) %></th>
+    <th><%= model_class.human_attribute_name(:approved_state) %></th>
+    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users= User.where(approved: false) %>
+  <% @users.each do |user|%>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.approved %></td>
+        <td><%= link_to "Edit", edit_user_path(user),:class => 'btn btn-default btn-xs' %></td>
+      </tr>
+  <%end%>
+
+
+  </tbody>
+</table>
+

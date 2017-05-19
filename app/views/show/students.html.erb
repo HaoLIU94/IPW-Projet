@@ -17,7 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @users = User.all %>
+  <% @users = User.all.where(approved: true) %>
   <% @users.where(:student => true).each do |user| %>
       <tr>
         <td><%= user.first_name %></td>

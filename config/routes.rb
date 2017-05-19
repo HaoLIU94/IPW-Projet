@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'show/profile'
 
+  get 'show/waitinglist'
+
   devise_for :users, controllers: { sessions: 'users/sessions'}
 
   resources :users
