@@ -62,4 +62,6 @@ gem "haml"
 
 gem "html2haml"
 
-gem 'pg'
+gem "pg"
+
+gem "devise_invitable"
