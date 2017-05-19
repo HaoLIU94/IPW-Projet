@@ -29,4 +29,15 @@
       </div>
   <% end %>
 </div>
+
+<% @users= User.where(approved: false) %>
+<% @users.each do |user|%>
+<tr>
+  <td><%= user.first_name %></td>
+  <td><%= user.email %></td>
+  <td><%= user.approved %></td>
+  <td><%= link_to "Edit", edit_user_path(user) %></td>
+</tr>
+    <%end%>
+
 <p>&copy;Hao LIU, Loubna HENNACH 2017</p>
