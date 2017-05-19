@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update] # probably want to keep using this
+  before_action :set_user, only: [:show, :edit, :update, :destroy] # probably want to keep using this
   before_action :authenticate_user!
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if params[:approved] == "false"
+      @users = User.where(approved: false)
+    else
+      @users = User.all
+    end
   end
 
   # # GET /users/1
@@ -13,9 +17,13 @@ class UsersController < ApplicationController
 
   end
 
+  def destroy
+    @user.destroy
+    redirect_to show_students_path
+  end
+
   # GET /users/1/edit
   def edit
-
   end
   # # PATCH/PUT /users/1
   # # PATCH/PUT /users/1.json
@@ -42,4 +50,16 @@ class UsersController < ApplicationController
     params.require(:user).permi.permit(:role, :user_name)
   end
 
+end
+
+def active_for_authentication?
+  super && approved?
+end
+
+def inactive_message
+  if !approved?
+    :not_approved
+  else
+    super # Use whatever other message
+  end
 end
