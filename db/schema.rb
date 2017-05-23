@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20170519051823) do
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
     t.boolean  "prof",                   default: false
-    t.boolean  "student",                default: true
+    t.boolean  "student",                default: false
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
