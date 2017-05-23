@@ -23,6 +23,7 @@ db:setup
 db:structure:dump
 db:structure:load
 db:version
+db_tasks:rebuild
 dev:cache
 initializers
 log:clear
