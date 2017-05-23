@@ -15,6 +15,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/new
   def new
     @subject = Subject.new
+
   end
 
   # GET /subjects/1/edit
@@ -28,7 +29,7 @@ class SubjectsController < ApplicationController
 
     respond_to do |format|
       if @subject.save
-        format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
+        format.html { redirect_to subjects_path, notice: 'Subject was successfully created.' }
         format.json { render :show, status: :created, location: @subject }
       else
         format.html { render :new }
