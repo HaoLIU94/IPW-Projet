@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519051823) do
+ActiveRecord::Schema.define(version: 20170525180338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exams", force: :cascade do |t|
     t.string   "name"
-    t.string   "date"
     t.string   "prof"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "subject_id"
+    t.date     "date"
     t.index ["subject_id"], name: "index_exams_on_subject_id", using: :btree
     t.index ["user_id"], name: "index_exams_on_user_id", using: :btree
   end
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20170519051823) do
   create_table "subjects", force: :cascade do |t|
     t.string   "name"
     t.string   "prof"
-    t.string   "begin"
-    t.string   "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.date     "begin"
+    t.date     "end"
     t.index ["user_id"], name: "index_subjects_on_user_id", using: :btree
   end
 

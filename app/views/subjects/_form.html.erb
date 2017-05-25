@@ -29,14 +29,14 @@
   <div class="form-group">
     <%= f.label :begin, :class => 'control-label col-lg-2' %>
     <div class="col-lg-2">
-      <%= f.text_field :begin, :class => 'form-control' %>
+      <%= f.date_field :begin, :class => 'form-control' %>
     </div>
     <%=f.error_span(:begin) %>
   </div>
   <div class="form-group">
     <%= f.label :end, :class => 'control-label col-lg-2' %>
     <div class="col-lg-2">
-      <%= f.text_field :end, :class => 'form-control' %>
+      <%= f.date_field :end, :class => 'form-control' %>
     </div>
     <%=f.error_span(:end) %>
   </div>

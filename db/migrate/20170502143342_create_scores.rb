@@ -5,7 +5,6 @@ class CreateScores < ActiveRecord::Migration[5.0]
       t.string :exam
       t.integer :result
       t.string :prof
-      t.text :date
 
       t.timestamps
     end
